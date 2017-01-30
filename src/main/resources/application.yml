@@ -1,0 +1,21 @@
+spring:
+ profile.active: LOCAL
+
+flyway:
+ enabled: false
+
+server:
+ port:0
+ 
+---  
+
+spring:
+ profiles: LOCAL
+ datasource:
+  platform: h2
+  driverClassName: org.h2.Driver
+  url: jdbc:h2:mem:QRLogin
+  
+ jpa:
+  hibernate:
+   ddl-auto: none 
